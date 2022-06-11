@@ -2,10 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;    grid-template-areas: 
+        'header conteudo aside'
+        'header conteudo aside'
+        'header conteudo aside'
+        'header rodape rodape'
+    ;
 }
 
 .cabecalho{
@@ -16,28 +27,18 @@
     align-items: center; 
     position: fixed;
     height: 100%;
-    padding: 40px;
-}
-
-.container{
-    display: grid;
-    grid-template-columns: 350px 1fr 300px;
-    grid-template-areas: 
-        '. conteudo aside'
-        '. conteudo aside'
-        '. conteudo aside'
-        '. rodape rodape'
-    ;
+    padding: 32px;
+    width: 300px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.13);
 }
 
 .navegacao > ul > li + li{
-    margin-top: 20px;
+    margin-top: 12px;
 }
 
 .navegacao{
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 700;
-    width: 100%;
 }
 
 .navegacao > ul > li{
@@ -47,6 +48,7 @@
 
 .navegacao ul li > a{
     color: #5955A4;
+    font-size: 0.95em;
 }
 
 .none{
@@ -60,17 +62,29 @@
     margin-top: 10px;
 }
 
+.ativo1{
+    width: 300px;
+}
+
 .click1:hover .ativo1{
     transform: translateY(0) scale(1);
     max-height: 200px;
     margin: 15px 0px;
     background-color: #01BCDC;
-    padding: 10px;
+    padding: 7px;
+    width: 100%;
 }
 
 ul.ativo1 li a{
     color: white;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    transition-duration: 0.3s;
+}
+
+.ativo1 > li > a:hover{
+    background-color: #EF3F65;
+    padding: 3px;
+    border-radius: 3px;
 }
 
 .social{
@@ -96,12 +110,83 @@ a{
 
 .content{
     grid-area: conteudo;
+    padding: 40px;
+    line-height: 1.8;
+    letter-spacing: 1.5;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.titulop{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1;
+    line-height: 1;
+}
+
+.titulo{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin: 25px 0px;
+}
+
+.content p{
+    margin: 18px 0px;
+    letter-spacing: 1.3px;
+}
+
+.leiatb{
+    font-style: italic;
+}
+
+span.subt{
+    display: block;
+    margin: 15px 0px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+#ult{
+    margin-bottom: 0px;
+}
+
+.img{
+    margin: 20px auto;
+    width: 100%;
+    border-radius: 4px;
 }
 
 .lateral{
     grid-area: aside;
+    justify-self: center;
 }
 
 .rodape{
     grid-area: rodape;
+    padding: 40px;
+}
+
+.relacionados{
+    display: flex;
+}
+
+.titulorod{
+    font-size: 1.55em;
+    font-weight: lighter;
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 1.3px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.relacionados li span{
+    display: block;
+    text-align: center;
+}
+
+.relacionados li img{
+    display: block;
+    margin: 0px auto;
 }
