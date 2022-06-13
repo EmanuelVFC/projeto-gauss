@@ -239,6 +239,11 @@ span.subt{
     font-size: 0.9em;
 }
 
+.navbar-responsiva{
+    display: none;
+    grid-area: navbar;
+}
+
 /* CELULARES */
 
 @media (max-width: 481px){
@@ -246,10 +251,40 @@ span.subt{
         grid-template-columns: auto;
         grid-template-areas: 
             'header'
+            'navbar'
             'conteudo'
             'aside'
             'rodape'
         ;
+    }
+
+    .navbar-responsiva{
+        display: block;
+    }
+
+    .lista-navbar-geral{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .sub-menu1, .sub-menu2, .sub-menu3{
+        display: none;
+    }
+
+    .navbar-responsiva > ul > .list-item1:hover .sub-menu1{
+        display: block;
+    }
+
+    .navbar-responsiva > ul > .list-item2:hover .sub-menu2{
+        display: block;
+    }
+
+    .navbar-responsiva > ul > .list-item3:hover .sub-menu3{
+        display: block;
+    }
+
+    .lista-navbar-geral > li + li{
+        margin-left: 15px;
     }
 
     .cabecalho{
