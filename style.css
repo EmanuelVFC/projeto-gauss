@@ -248,7 +248,7 @@ span.subt{
 
 @media (max-width: 481px){
     .container{
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
         grid-template-areas: 
             'header'
             'navbar'
@@ -256,35 +256,6 @@ span.subt{
             'aside'
             'rodape'
         ;
-    }
-
-    .navbar-responsiva{
-        display: block;
-    }
-
-    .lista-navbar-geral{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .sub-menu1, .sub-menu2, .sub-menu3{
-        display: none;
-    }
-
-    .navbar-responsiva > ul > .list-item1:hover .sub-menu1{
-        display: block;
-    }
-
-    .navbar-responsiva > ul > .list-item2:hover .sub-menu2{
-        display: block;
-    }
-
-    .navbar-responsiva > ul > .list-item3:hover .sub-menu3{
-        display: block;
-    }
-
-    .lista-navbar-geral > li + li{
-        margin-left: 15px;
     }
 
     .cabecalho{
@@ -298,5 +269,17 @@ span.subt{
 
     .navegacao{
         display: none;
+    }
+}
+
+@media (max-width: 930px){
+    .container{
+        grid-template-areas: 
+            'header conteudo conteudo'
+            'header conteudo conteudo'
+            'header conteudo conteudo'
+            'header aside aside'
+            'header rodape rodape'
+        ;
     }
 }
