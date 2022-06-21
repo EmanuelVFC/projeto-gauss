@@ -11,7 +11,8 @@
 }
 .container{
     display: grid;
-    grid-template-columns: 300px 1fr 300px;    grid-template-areas: 
+    grid-template-columns: 300px 1fr 300px;    
+    grid-template-areas: 
         'header conteudo aside'
         'header conteudo aside'
         'header conteudo aside'
@@ -200,7 +201,9 @@ span.subt{
 }
 
 .relacionados{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    max-width: 800px;
 }
 
 .titulorod{
@@ -229,10 +232,6 @@ span.subt{
     margin-bottom: 7px;
 }
 
-.relacionados > li + li{
-    margin-left: 15px;
-}
-
 .infos-postagens{
     display: block;
     font-family: 'Roboto Condensed', sans-serif;
@@ -244,8 +243,15 @@ span.subt{
     grid-area: navbar;
 }
 
+.menu-toggle{
+    display: none;
+}
 
-@media (min-width: 480px), (max-width: 930px){
+#check{
+    display: none;
+}
+
+@media (max-width: 930px){
     .container{
         grid-template-areas: 
             'header conteudo conteudo'
@@ -254,6 +260,65 @@ span.subt{
             'header aside aside'
             'header rodape rodape'
         ;
+    }
+}
+
+@media (max-width: 615px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'header header'
+            'conteudo conteudo'
+            'aside aside'
+            'rodape rodape'
+        ;
+    }
+
+    .cabecalho{
+        display: flex;
+        width: 100%;
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .menu-toggle{
+        font-size: 40px;
+        color: #5955A4;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    .lista-navegacao{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #5955A4;
+        left: 0;
+        top: 137.98px;
+        transition: all .5s;
+    }
+
+    .navegacao > ul > li > a{
+        color: #fff;
+    }
+
+    .navegacao > ul{
+        margin-top: 50px;
+    }
+
+    /* #check:checked .lista{
+        left: 0;
+    } */
+
+    .social{
+        display: none;
     }
 }
 
@@ -271,8 +336,23 @@ span.subt{
     }
 
     .cabecalho{
+        display: flex;
         width: 100%;
         position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .toggle{
+        display: block;
+    }
+
+    .menu-toggle{
+        font-size: 40px;
+        color: #5955A4;
+        border: none;
+        background-color: #fff;
     }
 
     .social{
@@ -281,5 +361,9 @@ span.subt{
 
     .navegacao{
         display: none;
+    }
+
+    .relacionados > li + li{
+        margin-left: 10px;
     }
 }
