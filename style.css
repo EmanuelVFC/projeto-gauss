@@ -295,12 +295,12 @@ span.subt{
         cursor: pointer;
     }
 
-    .lista-navegacao{
+    .lista-navegacao-queries{
         position: fixed;
         width: 100%;
         height: 100vh;
         background-color: #5955A4;
-        left: 0;
+        left: -100%;
         top: 85.98px;
         transition: all .5s;
     }
@@ -313,9 +313,9 @@ span.subt{
         margin-top: 50px;
     }
 
-    /* #check:checked .lista{
+    #check:checked ~ nav{
         left: 0;
-    } */
+    }
 
     .social{
         display: none;
