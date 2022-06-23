@@ -244,6 +244,7 @@ span.subt{
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .menu-toggle{
     display: none;
 }
@@ -325,6 +326,8 @@ span.subt{
 
 =======
 >>>>>>> parent of 9b4daa5 (Update style.css)
+=======
+>>>>>>> parent of 9b4daa5 (Update style.css)
 /* CELULARES */
 
 @media (max-width: 481px){
@@ -340,6 +343,7 @@ span.subt{
     }
 
     .cabecalho{
+<<<<<<< HEAD
 <<<<<<< HEAD
         display: flex;
         width: 100%;
@@ -362,6 +366,10 @@ span.subt{
         position: static;
         width: 100%;
 >>>>>>> parent of 9b4daa5 (Update style.css)
+=======
+        position: static;
+        width: 100%;
+>>>>>>> parent of 9b4daa5 (Update style.css)
     }
 
     .social{
@@ -372,12 +380,15 @@ span.subt{
         display: none;
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     .relacionados > li + li{
         margin-left: 10px;
     }
 }
 =======
+=======
+>>>>>>> parent of 9b4daa5 (Update style.css)
 }
 
 @media (max-width: 930px){
@@ -390,5 +401,9 @@ span.subt{
             'header rodape rodape'
         ;
     }
+<<<<<<< HEAD
+}
+>>>>>>> parent of 9b4daa5 (Update style.css)
+=======
 }
 >>>>>>> parent of 9b4daa5 (Update style.css)
